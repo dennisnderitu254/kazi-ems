@@ -22,7 +22,7 @@ export const getUsers = () => {
 
 export const assignRole = (data: { role: string; userId: number }) => {
   const current = getUsers();
-  const updated = current.map((item) => ({
+  const updated = current.map((item: { id: number; role: any; }) => ({
     ...item,
     role: item.id === data.userId ? data.role : item.role,
   }));
@@ -65,9 +65,9 @@ export const assignDepartment = (data: {
   userId: string | number;
 }) => {
   const users = getUsers() ?? [];
-  const user = users.find((item) => (item.id = data.userId));
+  const user = users.find((item:{ id: number}) => (item.id === data.userId));
   if (user) {
-    const updatedUsers = users.map((user) => ({
+    const updatedUsers = users.map((user: { id: string | number; departmentId: any; }) => ({
       ...user,
       departmentId: user.id === data.userId ? data.id : user.departmentId,
     }));
@@ -127,7 +127,7 @@ export const updateTask = (data: { id: number; title: string }) => {
   return updated;
 };
 
-export const assignTask = (data: { id: number; userId: number }) => {
+export const assignTask = (data: { id: number; userId: number|null }) => {
   const current = getTasks();
   const updated = current.map((item: any) => ({
     ...item,
