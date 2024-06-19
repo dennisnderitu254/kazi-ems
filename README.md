@@ -1,6 +1,28 @@
-# React + TypeScript + Vite
+# Kazi-ems (employee management system)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Project Video Demo - https://youtu.be/ym46gCxnvi8 
+
+- Hosting URL: https://kazi-ems.web.app 
+
+## Project setup
+
+- Clone the Repository - https://github.com/dennisnderitu254/kazi-ems 
+
+- run `npm install`
+
+- run `npm run dev`
+
+### Login as Admin
+
+- `For Testing Purposes`
+
+```
+email: dknderitu@gmail.com
+password: 1234
+```
+
+
+
 
 Currently, two official plugins are available:
 
